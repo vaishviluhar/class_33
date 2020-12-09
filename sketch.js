@@ -89,7 +89,7 @@ function keyPressed(){
     slingshot.attach(bird.body);
 }
 
-async function getTime(){
+async function getBackgroundImg(){
     var response = await fetch("http://worldclockapi.com/api/json/est/now");
     var responseJSON = await response.json();
 console.log(responseJSON)

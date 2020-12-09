@@ -89,8 +89,8 @@ function keyPressed(){
     slingshot.attach(bird.body);
 }
 
-async function getBackgroundImg(){
-    var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
+async function getTime(){
+    var response = await fetch("https://worldtimeapi.org/api/timezone/Asia/Kolkata");
     var responseJSON = await response.json();
 console.log(responseJSON)
     var datetime = responseJSON.datetime;

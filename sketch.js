@@ -13,7 +13,7 @@ var bg = "sprites/bg1.png";
 
 
 function preload() {
-    getBackgroundImg();
+    getTime();
 }
 
 function setup(){
@@ -89,7 +89,7 @@ function keyPressed(){
     slingshot.attach(bird.body);
 }
 
-async function getBackgroundImg(){
+async function getTime(){
     var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
     var responseJSON = await response.json();
 console.log(responseJSON)
@@ -105,5 +105,4 @@ console.log(responseJSON)
     }
 
     backgroundImg = loadImage(bg);
-    console.log(backgroundImg);
 }
